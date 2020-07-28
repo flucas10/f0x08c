@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>f0x08c Visualizer</title>
+        <style>
+            * {font-family: sans-serif;}
+            body, textarea {background-color: #000; color: #FFF; margin: 0px;}
+            textarea {width: 250px; height: 250px;}
+            table, td {border: solid 2px #777;}
+            #PROM, #GREG, #SREG, #CPU {overflow: hidden; overflow-y: scroll; height: 250px;}
+            .byte {display: inline-block; border: solid 1px #555; height: 20px; letter-spacing: -1px; text-align: center;  font-stretch: expanded; padding: 1px;}
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>PROM:<br><textarea id="PROM">0b00100000001010,
+0b00100000001011,
+0b10000000000010,
+0b10110000000000,
+0b11000001010000,
+0b01010001000010,
+0b10000000000010,
+0b10100000000011,
+0b01110000000010,
+0b01100000001111,
+0b10010000000000,
+0b10100000000010,
+0b01000000001101,
+0b11100000000000,</textarea><button id="loadPROM">Load PROM</button></td>
+                <td>Gobal Registers:<br><div id="GREG"></div></td>
+                <td>Stack Register:<br><div id="SREG"></div>Pointer : <div class="byte" id="SREGi"></div></td>
+            </tr>
+            <tr>
+                <td><div id="CPU"></div></td>
+            </tr>
+        </table>
+        <script src="f0x08c_visualizer.js"></script>
+    </body>
+</html>
